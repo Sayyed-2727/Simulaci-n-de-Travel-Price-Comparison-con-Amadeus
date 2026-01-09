@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Alert | Monitor de Vuelos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>✈️ TravelTracker <span class="badge">Pro</span></h1>
+            <p>Encuentra el mejor precio y te avisamos cuando baje</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-section">
+            <div class="card">
+                <h2>¿A dónde quieres ir?</h2>
+                <form id="searchForm" class="grid-form">
+                    <div class="form-group">
+                        <label>Origen (IATA)</label>
+                        <input type="text" id="origin" placeholder="MAD" maxlength="3" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Destino (IATA)</label>
+                        <input type="text" id="destination" placeholder="JFK" maxlength="3" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Fecha de Salida</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group btn-align">
+                        <button type="submit" id="btnSearch">Buscar Vuelos</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <div id="loader" class="hidden">Buscando las mejores ofertas...</div>
+            <div id="resultsGrid">
+                </div>
+        </section>
+    </main>
+
+    <div id="notification-toast" class="toast hidden"></div>
+
+    <footer>
+        <p>&copy; 2024 TravelTracker API Integration | Powered by Amadeus & AWS</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
